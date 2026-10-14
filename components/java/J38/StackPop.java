@@ -3,21 +3,24 @@ public class StackPop {
     private int top = -1;
 
     public boolean push(int val) {
-        if (top >= 9) return false;
+        if (top >= 9)
+            return false;
         top++;
         data[top] = val;
         return true;
     }
 
     public int pop() {
-        if (top < 0) return -1;
+        if (top < 0)
+            return -1;
         int val = data[top];
-        top -= 2;
+        top--;
         return val;
     }
 
     public int peek() {
-        if (top < 0) return -1;
+        if (top < 0)
+            return -1;
         return data[top];
     }
 }
